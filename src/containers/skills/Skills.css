@@ -1,0 +1,136 @@
+/* ================= MAIN CONTAINER ================= */
+
+.skills-main-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 50px 0;
+}
+
+.skills-main-div > * {
+  flex: 1;
+}
+
+/* ================= IMAGE ================= */
+
+.skills-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-image-div img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+/* ================= TEXT CONTAINER ================= */
+
+.skills-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 600px;
+  gap: 10px;
+
+  text-align: left !important; /* 🔥 FORCE */
+}
+
+/* ================= HEADING ================= */
+
+.skills-heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 15px;
+
+  max-width: 500px;
+  white-space: normal;
+}
+
+/* ================= BULLET LIST ================= */
+
+.skills-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+
+  width: 100%;
+  margin: 10px 0;
+
+  text-align: left !important;
+}
+
+/* Bullet */
+.bullet {
+  flex-shrink: 0;
+  color: #ff6b35;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* 🔥 CRITICAL FIX (THIS SOLVES YOUR ISSUE) */
+.skills-text p {
+  margin: 0;
+  text-align: left !important; /* 🔥 FORCE OVERRIDE */
+  line-height: 1.7;
+  font-size: 18px;
+  width: 100%;
+}
+
+/* ================= REMOVE GLOBAL CENTER ================= */
+
+/* 🔥 OVERRIDE ANY GLOBAL STYLE */
+.subTitle {
+  text-align: left !important;
+}
+
+/* ================= HEADER ================= */
+
+.skills-header {
+  font-size: 60px;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1380px) {
+  .skills-heading {
+    font-size: 36px;
+  }
+
+  .skills-image-div img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-main-div {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skills-text-div {
+    margin: 0 20px;
+    align-items: flex-start;
+    text-align: left !important;
+  }
+
+  .skills-heading {
+    font-size: 28px;
+  }
+
+  .skills-text p {
+    font-size: 16px;
+    text-align: left !important;
+  }
+
+  .skills-image-div img {
+    max-width: 280px;
+  }
+}

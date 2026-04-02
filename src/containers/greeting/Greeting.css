@@ -1,0 +1,196 @@
+/* ================= CONTAINERS ================= */
+
+.main,
+.greet-main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 2rem auto 0;
+  padding: 0 60px;
+}
+
+/* ================= LAYOUT ================= */
+
+.greeting-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  min-height: 80vh;
+}
+
+.greeting-main > * {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ================= TEXT ================= */
+
+.greeting-text-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 🔥 FIX */
+  text-align: left; /* 🔥 FIX */
+  height: 100%;
+}
+
+.greeting-text-div > div {
+  max-width: 700px;
+  text-align: left; /* 🔥 FIX */
+}
+
+/* HEADING */
+.greeting-text {
+  font-size: 64px;
+  line-height: 1.2;
+  font-family: "Google Sans Bold";
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* EMOJI */
+.wave {
+  display: inline-block;
+  margin-left: 8px;
+  animation: wave-animation 1.8s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+/* ANIMATION */
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* SUBTITLE */
+.greeting-nickname {
+  font-size: 26px;
+  margin: 15px 0;
+  font-family: "Google Sans Bold Italic";
+}
+
+/* 🔥 PARAGRAPH (FINAL FIX) */
+.greeting-text-p {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 650px;
+  font-family: "Google Sans Medium";
+
+  text-align: left !important; /* 🔥 FORCE LEFT */
+  margin: 10px 0;
+}
+
+/* ================= BUTTONS ================= */
+
+.button-greeting-div {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* ================= IMAGE ================= */
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.greeting-image-div img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1380px) {
+  .greeting-text {
+    font-size: 48px;
+    white-space: normal;
+  }
+
+  .greeting-text-p {
+    font-size: 18px;
+  }
+
+  .greeting-image-div img {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main,
+  .greet-main {
+    padding: 0 20px;
+  }
+
+  .greeting-main {
+    flex-direction: column;
+    gap: 40px;
+    min-height: auto;
+  }
+
+  .greeting-main > * {
+    align-items: center;
+  }
+
+  .greeting-text-div {
+    justify-content: center;
+  }
+
+  .greeting-text {
+    font-size: 32px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .greeting-nickname {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .greeting-text-p {
+    font-size: 16px;
+    text-align: left !important; /* 🔥 keep left */
+  }
+
+  .button-greeting-div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-repo-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .greeting-image-div img {
+    max-width: 260px;
+    margin-top: 20px;
+  }
+}
