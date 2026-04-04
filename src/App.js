@@ -14,7 +14,7 @@ function App() {
         <div>
           <Main theme={chosenTheme} />
         </div>
-        <Analytics /> {/* 👈 add this */}
+        <Analytics />
       </>
     </ThemeProvider>
   );
