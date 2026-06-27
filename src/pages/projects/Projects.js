@@ -78,29 +78,33 @@ class Projects extends Component {
                 ))}
               </div>
 
-              // <div className="project-links">
-              //   {project.github && (
-              //     <a href={project.github} target="_blank" rel="noreferrer">
-              //       GitHub
-              //     </a>
-              //   )}
-              //   {project.demo && (
-              //     <a href={project.demo} target="_blank" rel="noreferrer">
-              //       Live
-              //     </a>
-              //   )}
-              // </div>
+              {/* 
+<div className="project-links">
+  {project.github && (
+    <a href={project.github} target="_blank" rel="noreferrer">
+      GitHub
+    </a>
+  )}
+  {project.demo && (
+    <a href={project.demo} target="_blank" rel="noreferrer">
+      Live
+    </a>
+  )}
+</div>
+*/}
             </motion.div>
           ))}
         </div>
 
-        // <Button
-        //   text={"More Projects"}
-        //   className="project-button"
-        //   href={greeting.githubProfile}
-        //   newTab={true}
-        //   theme={theme}
-        // />
+       {/*
+<Button
+  text={"More Projects"}
+  className="project-button"
+  href={greeting.githubProfile}
+  newTab={true}
+  theme={theme}
+/>
+*/}
 
         <Footer theme={theme} onToggle={this.props.onToggle} />
         <TopButton theme={theme} />
