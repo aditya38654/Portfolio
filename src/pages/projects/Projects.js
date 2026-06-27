@@ -44,12 +44,12 @@ class Projects extends Component {
           </Fade>
         </div>
 
-        {/* Project Grid */}
+        {/* Project Cards */}
         <div className="repo-cards-div-main">
           {projects.map((project) => (
             <motion.div
-              className="project-card"
               key={project.title}
+              className="project-card"
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
@@ -64,8 +64,8 @@ class Projects extends Component {
               <h4>📈 Impact</h4>
               {project.impact && (
                 <ul>
-                  {project.impact.map((item, idx) => (
-                    <li key={idx}>{item}</li>
+                  {project.impact.map((item, index) => (
+                    <li key={index}>{item}</li>
                   ))}
                 </ul>
               )}
@@ -77,30 +77,6 @@ class Projects extends Component {
                       {tech}
                     </span>
                   ))}
-                </div>
-              )}
-
-              {(project.github || project.demo) && (
-                <div className="project-links">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub
-                    </a>
-                  )}
-
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
-                  )}
                 </div>
               )}
             </motion.div>
